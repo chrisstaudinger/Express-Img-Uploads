@@ -1,8 +1,8 @@
 # Express Img Uploads AWS S3 Cloud Storage ☁
 
-# [View Application Here]()
+# [View Application Here](https://express-img-uploads-aws-s3.netlify.com/)
 
-![Uploading Image to AWS S3 Gif](placeholder "Uploading Image to AWS S3 Gif")
+![Uploading Image to AWS S3 Gif](https://github.com/chrisstaudinger/Express-Img-Uploads/blob/master/frontend/assets/images/aws-s3-upload.gif?raw=true "Uploading Image to AWS S3 Gif")
 
 ### Code Used
 
