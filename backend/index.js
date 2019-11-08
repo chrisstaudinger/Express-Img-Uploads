@@ -6,16 +6,16 @@ require('dotenv').config()
 
 const app = new express();
 
-// we say that we're using in memory storage for multer
+// in memory storage for multer
 const storage = multer.memoryStorage()
 
-// we say that these are the fields we're getting from our form
+// These are the fields being retireved from the form
 const fields = [
   {name: 'name'},
   {name: 'image'}
 ]
 
-// we create our middleware mutler function and store it in a variable we can pass to the endpoint
+// middleware mutler function to pass to the endpoint
 const upload = multer({ storage: storage }).fields(fields);
 
 // we need cors for the different ports
@@ -47,13 +47,13 @@ app.post('/upload', upload, (req, res) => {
 
   s3credentials.upload(fileParams, (err, data) => {
     if (err) {
-      res.send('you got an error')
+      res.send('you got an error ❌')
     } else {
-      console.log('All good')
+      console.log('Image succesfully uploaded ✅')
       res.send(data.Location)
     }
   })
 })
 
-// listening on port 5000
-app.listen(5000, () => console.log('running on port 5000'))
+const PORT = process.env.PORT || 5000
+app.listen(PORT, () => console.log(`listening to PORT: ${PORT} 🙂`))

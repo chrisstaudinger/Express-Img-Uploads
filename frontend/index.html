@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Express AWS S3 Img Uploads</title>
+</head>
+<body class="h-screen flex flex-col justify-around items-center">
+  <form enctype="multipart/form-data" name="file-upload" class="h-64 flex justify-around flex-col border border-bg-grey-500 py-3 px-3 max-w-full">
+    <label>Title:</label>
+    <input type="text" name="name" id="name" placeholder="Image Title" class="border border-grey-500">
+    <label>Image:</label>
+    <input type="file" name="image" id="image" class="cursor-pointer">
+    <input type="submit" value="Submit" class="bg-blue-500 text-white font-bold py-3 px-6 rounded cursor-pointer hover:bg-blue-700">
+  </form>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="index.js"></script>
+</html>
